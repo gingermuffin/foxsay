@@ -2,7 +2,7 @@
 
 This is a simple program that generates pictures of a cute fox with a message.
 
-It is like a `cowsay` buy wihout cows! Fox girls are better!
+It is like a `cowsay` but without cows! Fox girls are better!
 
 ![Fox Image](./assets/fox.png)
 
