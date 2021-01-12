@@ -4,6 +4,8 @@ This is a simple program that generates pictures of a cute fox with a message.
 
 It is like a `cowsay` buy wihout cows! Fox girls are better!
 
+![Fox Image](./assets/fox.png)
+
 ## Usage
 
 ```sh
