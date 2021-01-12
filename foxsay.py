@@ -9,7 +9,10 @@ MAX_WIDTH = 80
 
 GREEN = u"\u001b[32m"
 ORANGE = u"\u001b[33m"
+BLUE = u"\u001b[34m"
 RESET = u"\u001b[0m"
+
+BALLOON_COLOR = BLUE
 
 BALLOON_IMAGE_PARTS = [
     ["╭", "─", "╮"],
@@ -72,40 +75,56 @@ def draw_balloon(text = None):
     result = ""
 
     # Draw top line.
-    result += BALLOON_IMAGE_PARTS[0][0] +\
+    result += BALLOON_COLOR +\
+              BALLOON_IMAGE_PARTS[0][0] +\
               BALLOON_IMAGE_PARTS[0][1] * (line_width + 2) +\
               BALLOON_IMAGE_PARTS[0][2] +\
+              RESET +\
               "\n"
 
     # Draw an empty line.
-    result += BALLOON_IMAGE_PARTS[1][0] +\
+    result += BALLOON_COLOR +\
+              BALLOON_IMAGE_PARTS[1][0] +\
+              RESET +\
               BALLOON_IMAGE_PARTS[1][1] * (line_width + 2) +\
+              BALLOON_COLOR +\
               BALLOON_IMAGE_PARTS[1][2] +\
+              RESET +\
               "\n"
 
     for line in lines:
         extra_space = line_width - len(line)
 
-        result += BALLOON_IMAGE_PARTS[1][0] +\
+        result += BALLOON_COLOR +\
+                  BALLOON_IMAGE_PARTS[1][0] +\
+                  RESET +\
                   BALLOON_IMAGE_PARTS[1][1] +\
                   line +\
                   BALLOON_IMAGE_PARTS[1][1] * extra_space +\
                   BALLOON_IMAGE_PARTS[1][1] +\
+                  BALLOON_COLOR +\
                   BALLOON_IMAGE_PARTS[1][2] +\
+                  RESET +\
                   "\n"
 
     # Draw an empty line.
-    result += BALLOON_IMAGE_PARTS[1][0] +\
+    result += BALLOON_COLOR +\
+              BALLOON_IMAGE_PARTS[1][0] +\
+              RESET +\
               BALLOON_IMAGE_PARTS[1][1] * (line_width + 2) +\
+              BALLOON_COLOR +\
               BALLOON_IMAGE_PARTS[1][2] +\
+              RESET +\
               "\n"
 
     # Draw bottom line.
-    result += BALLOON_IMAGE_PARTS[2][0] +\
+    result += BALLOON_COLOR +\
+              BALLOON_IMAGE_PARTS[2][0] +\
               BALLOON_IMAGE_PARTS[2][1] +\
               BALLOON_IMAGE_PARTS[3][1] +\
               BALLOON_IMAGE_PARTS[2][1] * (line_width) +\
               BALLOON_IMAGE_PARTS[2][2] +\
+              RESET +\
               "\n"
 
     print(result)
