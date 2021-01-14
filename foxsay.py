@@ -49,6 +49,7 @@ WISDOM = [
     # "A-oo-oo-oo-ooo!"
     "Eating one cooked chicken restores six hunger",
     "A fox has to do what a fox has to do",
+    "The mitochondria is the powerhouse of the cell",
 ]
 
 # Wisdom functions.
